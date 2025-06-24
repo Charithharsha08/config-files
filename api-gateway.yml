@@ -17,6 +17,11 @@ spring:
           predicates:
             - Path=/api/v1/user/**
 
+        - id: parking-space-service
+          uri: lb://parking-space-service
+          predicates:
+            - Path=/api/v1/parking-space/**
+
 eureka:
   client:
     fetch-registry: true
